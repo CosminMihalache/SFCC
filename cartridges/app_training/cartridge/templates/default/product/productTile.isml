@@ -19,6 +19,9 @@
             <isinclude template="product/productTileFooter" />
         </isif>
         <div class="product-test-class">custom css class example</div>
+=======
+       
+>>>>>>> Stashed changes
     </div>
     <!-- END_dwmarker -->
 </div>
