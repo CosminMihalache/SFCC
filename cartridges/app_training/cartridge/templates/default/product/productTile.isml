@@ -18,6 +18,7 @@
         <isif condition="${pdict.display.ratings !== false}">
             <isinclude template="product/productTileFooter" />
         </isif>
+<<<<<<< Updated upstream
         <div class="product-test-class">custom css class example</div>
 =======
        
