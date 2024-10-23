@@ -1,0 +1,37 @@
+<script>
+    console.log('Category ID: ${viewData.category.categoryId}');
+    console.log('Background Color: ${viewData.category.backgroundColor}');
+    console.log('Text Color: ${viewData.category.textColor}');
+    console.log('Text Attribute: ${viewData.category.textAttribute}');
+</script>
+
+<div class="product-tile">
+    <!-- dwMarker="product" dwContentID="${product.uuid}" -->
+    <isinclude template="product/components/productTileImage" />
+    <isif
+        condition="${viewData.category && viewData.category.backgroundColor && viewData.category.textColor && viewData.category.textAttribute}">
+        <div class="product-badge"
+            style="background-color: ${viewData.category.backgroundColor}; color: ${viewData.category.textColor};">
+            ${viewData.category.textAttribute}
+        </div>
+    </isif>
+    <div class="tile-body">
+        <isif condition="${pdict.display.swatches !== false}">
+            <isinclude template="product/components/productTileSwatch" />
+        </isif>
+
+        <isinclude template="product/components/productTileName" />
+
+        <isset name="price" value="${product.price}" scope="page" />
+        <isif condition="${product.productType === 'set'}">
+            <isinclude template="product/components/pricing/setPrice" />
+            <iselse>
+                <isinclude template="product/components/pricing/main" />
+        </isif>
+
+        <isif condition="${pdict.display.ratings !== false}">
+            <isinclude template="product/productTileFooter" />
+        </isif>
+    </div>
+    <!-- END_dwmarker -->
+</div>
