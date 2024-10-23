@@ -1,0 +1,7 @@
+<link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/style.css')}" />
+
+<div class="home-page">
+    <isdecorate template="common/layout/page">
+        <isinclude template="home/productCarousel" />
+    </isdecorate>
+</div>
