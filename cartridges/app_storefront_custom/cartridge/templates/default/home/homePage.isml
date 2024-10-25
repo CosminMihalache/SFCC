@@ -1,0 +1,14 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/productTile.js');
+        assets.addCss('/css/homePage.css');
+    </isscript>
+
+    <div class="bg-light">
+        <div class="form">
+            <isinclude template="account/addressForm.isml" />
+        </div>
+    </div>
+
+</isdecorate>
