@@ -114,5 +114,11 @@
   "aliasCSS": {
     "base": "cartridges/app_storefront_base/cartridge/client/default/scss",
     "custom": "cartridges/app_custom_cacaushow/cartridge/client/default/scss"
+  },
+  "bin": {
+    "sfra": "bin/Makefile.js"
+  },
+  "bugs": {
+    "url": "https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/issues"
   }
 }
